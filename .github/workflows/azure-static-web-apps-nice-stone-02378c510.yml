@@ -34,7 +34,7 @@ jobs:
           rm -rf node_modules
           yarn install --frozen-lockfile
       - name: Build Angular Project
-        run: yarn ng build
+        run: yarn prod
         env:
           CI: true
       - name: Build And Deploy
