@@ -24,10 +24,13 @@ jobs:
         with:
           node-version: "20.11" # This line sets the Node.js version
           cache: "yarn"
+      - name: Check Node.js version
+        run: node -v
       - name: Install Yarn
         run: npm install -g yarn
       - name: Clear node_modules and reinstall dependencies with Yarn
         run: |
+          yarn cache clean
           rm -rf node_modules
           yarn install --frozen-lockfile
       - name: Build And Deploy
