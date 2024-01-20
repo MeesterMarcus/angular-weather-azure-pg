@@ -22,8 +22,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "20.11" # This line sets the Node.js version to 18.x
-          cache: "npm"
+          node-version: "20.11" # This line sets the Node.js version
+          cache: "yarn"
+      - name: Install Yarn
+        run: npm install -g yarn
+      - name: Clear node_modules and reinstall dependencies with Yarn
+        run: |
+          rm -rf node_modules
+          yarn install --frozen-lockfile
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
