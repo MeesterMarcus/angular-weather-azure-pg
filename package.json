@@ -10,7 +10,7 @@
     "serve:ssr:angular-weather-azure-pg": "node dist/angular-weather-azure-pg/server/server.mjs"
   },
   "engines": {
-    "node": "20.11.0"
+    "node": "20.9.0"
   },  
   "private": true,
   "dependencies": {
