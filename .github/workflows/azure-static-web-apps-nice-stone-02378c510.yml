@@ -43,7 +43,7 @@ jobs:
           # ... (rest of your configurations)
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
-          output_location: "" # Built app content directory - optional
+          output_location: "dist" # Built app content directory - optional
           # ... (rest of your configurations)
 
   close_pull_request_job:
