@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "20.11" # This line sets the Node.js version
+          node-version: "20.9.0" # This line sets the Node.js version
           cache: "yarn"
       - name: Check Node.js version
         run: node -v
